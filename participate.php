@@ -66,6 +66,17 @@ setTimeout(function() {
     );
 }, 1000);
 
+$("#studentId").change(function(){
+    var i = $(this).prev('label').clone();
+    var objFile = $('#studentId')[0].files[0];
+    console.log(objFile);
+    if (objFile !== undefined)
+    {
+        var file = objFile.name;
+        $(this).prev('label').text(file);
+    }
+});
+
 function invokeCommonAjaxCall(formName, formData)
 {
     var formId = '#'+formName;
@@ -110,6 +121,17 @@ EOQ;
 if ($formId == 'partnership')
 {
     $arAdditionalJsOnLoad[] = <<<EOQ
+$("#proposalDoc").change(function(){
+    var i = $(this).prev('label').clone();
+    var objFile = $('#proposalDoc')[0].files[0];
+    //console.log(objFile);
+    if (objFile !== undefined)
+    {
+        var file = objFile.name;
+        $(this).prev('label').text(file);
+    }
+});
+
 $("#partnershipForm #others").on('change', function(){
     var ptn_othersChecked = $("#partnershipForm #others").is(":checked");
     if (ptn_othersChecked)
@@ -138,7 +160,7 @@ $("#partnershipForm #btnSubmit").on('click', function()
     var arPartnershipTypes = ['financialSupport', 'coBrandedMarketing', 'internshipsJobPlacements', 'others'];
     var partnershipTypesChecked = false;
     for (ptnType of arPartnershipTypes)
-    {alert(ptnType);
+    {
         partnershipTypesChecked = $(formId+' #'+ptnType).is(':checked');
         if (partnershipTypesChecked)
         {
@@ -179,6 +201,17 @@ EOQ;
 else if ($formId == 'studentRegistration')
 {
     $arAdditionalJsOnLoad[] = <<<EOQ
+$("#studentId").change(function(){
+    var i = $(this).prev('label').clone();
+    var objFile = $('#studentId')[0].files[0];
+    //console.log(objFile);
+    if (objFile !== undefined)
+    {
+        var file = objFile.name;
+        $(this).prev('label').text(file);
+    }
+});
+
 $("#studentRegistrationForm #meansOfAwareness").on('change', function(){
     if ($("#studentRegistrationForm #meansOfAwareness").val() == 'others')
     {
@@ -229,6 +262,17 @@ else
 if ($formId == 'donation')
 {
     $arAdditionalJsOnLoad[] = <<<EOQ
+$("#receiptOfPayment").change(function(){
+    var i = $(this).prev('label').clone();
+    var objFile = $('#receiptOfPayment')[0].files[0];
+    //console.log(objFile);
+    if (objFile !== undefined)
+    {
+        var file = objFile.name;
+        $(this).prev('label').text(file);
+    }
+});
+
 $("#donationForm #btnSubmit").on('click', function()
 {
     var formId = '#donationForm';
