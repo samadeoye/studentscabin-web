@@ -12,9 +12,6 @@ class ExportCSV
     {
         ob_start();
         $output = fopen("php://output",'w') or die("Can't open php://output");
-        // fputcsv($output, [
-        //     'CLIENT ID', 'CLIENT NAME', 'ITEM ID', 'ITEM NAME', 'ITEM CODE'
-        // ]);
         fputcsv($output, self::$arHeaders);
         
         $arData = self::$arData;
@@ -25,7 +22,6 @@ class ExportCSV
                 fputcsv($output, $r);
             }
 
-            //$fileName = 'ITEM-CLASSES-WITH-WRONG-CATEGORY.csv';
             header('Content-type: application/csv');
             header('Content-Disposition: attachment;filename="' . self::$fileName.'-'.date('Y-m-d h:i:a').'.csv');
             header('Cache-Control: max-age=0');
