@@ -55,14 +55,6 @@
                                     <a href="tel:<?php echo SITE_PHONE; ?>"> <?php echo SITE_PHONE; ?></a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-pin"></span>
-                                </div>
-                                <div class="text">
-                                    <p><?php echo SITE_ADDRESS; ?></p>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>

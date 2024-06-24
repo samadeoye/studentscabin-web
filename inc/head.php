@@ -73,14 +73,6 @@
           <ul class="list-unstyled main-header__top-address">
             <li>
               <div class="icon">
-                  <span class="icon-pin"></span>
-              </div>
-              <div class="text">
-                  <p><?php echo SITE_ADDRESS; ?></p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
                 <span class="icon-email"></span>
               </div>
               <div class="text">
