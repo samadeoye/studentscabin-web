@@ -18,18 +18,14 @@ class DonationForm
             $arDonationFrequency
         );
 
-        $siteBankName = SITE_BANK_NAME;
-        $siteBankAcctNumber = SITE_BANK_ACCT_NUMBER;
-        $siteBankAcctName = SITE_BANK_ACCT_NAME;
+        $paystackPaymentLink = PAYSTACK_PAYMENT_LINK;
 
         return <<<EOQ
         <form id="donationForm" onsubmit="return false;">
             <div class="row mt-3">
-                <div class="pb-3">
-                    Kindly transfer to our account below:<br>
-                    <span class="pe-4"><b>Bank Name:</b> {$siteBankName}</span>
-                    <span class="pe-4"><b>Account Name:</b> {$siteBankAcctName}</span>
-                    <span class="pe-4"><b>Account Number:</b> {$siteBankAcctNumber}</span>
+                <div class="mb-5">
+                    Kindly click the button below to make your donations now<br>
+                    <a class="thm-btn" target="_blank" href="{$paystackPaymentLink}">Donate</a>
                 </div>
                 <input type="hidden" id="action" name="action" value="addDonation">
                 <div class="col-xl-6">

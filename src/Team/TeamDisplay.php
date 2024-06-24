@@ -16,28 +16,21 @@ class TeamDisplay extends Team
         {
             foreach ($rs as $r)
             {
-                $id = $r['id'];
+                //$id = $r['id'];
                 $name = $r['name'];
                 $role = $r['role'];
                 $description = $r['description'];
-
-                /*
-                <div class="volunteers-one__img">
-                    <img src="assets/images/team/volunteers-1-1.jpg" alt="{$name}">
-                </div>
-                */
+                $imgName = str_replace(' ', '-', $name);
 
                 $teams .= <<<EOQ
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="volunteers-one__single">
                         <div class="volunteers-one__img">
-                            <img src="assets/images/team/volunteers-1-1.jpg" alt="">
+                            <img src="assets/images/team/{$imgName}.jpg" alt="{$name}">
                         </div>
                         <div class="volunteers-one__content">
-                            <a href="team-member?id={$id}">
-                                <h4 class="volunteers-one__name">{$name}</h4>
-                                <p class="volunteers-one__title">{$role}</p>
-                            </a>
+                            <h4 class="volunteers-one__name">{$name}</h4>
+                            <p class="volunteers-one__title">{$role}</p>
                             <p style="text-align:left;" class="p-4">{$description}</p>
                         </div>
                     </div>
@@ -58,25 +51,21 @@ EOQ;
         {
             foreach ($rs as $r)
             {
-                $id = $r['id'];
+                //$id = $r['id'];
                 $name = $r['name'];
                 $role = $r['role'];
-
-                /*
-                <div class="volunteers-one__img">
-                    <img src="assets/images/team/volunteers-1-1.jpg" alt="{$name}">
-                </div>
-                */
+                $imgName = str_replace(' ', '-', $name);
 
                 $teams .= <<<EOQ
                 <div class="item">
                     <div class="volunteers-one__single">
-                        <a href="team-member?id={$id}">
-                            <div class="volunteers-one__content">
-                                <h4 class="volunteers-one__name">{$name}</h4>
-                                <p class="volunteers-one__title">{$role}</p>
-                            </div>
-                        </a>
+                        <div class="volunteers-one__img">
+                            <img src="assets/images/team/{$imgName}.jpg" alt="{$name}">
+                        </div>
+                        <div class="volunteers-one__content">
+                            <h4 class="volunteers-one__name">{$name}</h4>
+                            <p class="volunteers-one__title">{$role}</p>
+                        </div>
                     </div>
                 </div>
 EOQ;

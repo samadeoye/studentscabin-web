@@ -10,8 +10,9 @@ define('SITE_DOMAIN', 'studentscabin.com');
 define('DEF_LOCAL_SERVER', 'http://localhost');
 define('DEF_LIVE_SERVER', 'https://studentscabin.com');
 
-define('STUDENTS_COMMUNITY_LINK', '');
 define('WELCOME_TEXT', "Students' Oasis of Support, Harbor of Hope!");
+define('STUDENTS_COMMUNITY_LINK', 'https://chat.whatsapp.com/Cb5UHcXGQIo3CkQT2jkrNt');
+define('PAYSTACK_PAYMENT_LINK', 'https://paystack.com/pay/studentscabinsupport');
 
 //SOCIALS
 define('SITE_FACEBOOK', 'https://www.facebook.com/profile.php?id=61559358196091');

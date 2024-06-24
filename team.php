@@ -27,7 +27,7 @@ require_once 'inc/head.php';
         <div class="section-title text-center mt-5">
             <span class="section-title__tagline">Meet the dedicated individuals who make up the StudentsCabin team</span>
         </div>
-        <div class="row align-items-center">
+        <div class="row">
             <?php
                 echo StudentsCabin\Team\TeamDisplay::getTeamsDisplay();
             ?>

@@ -220,6 +220,11 @@ require_once 'inc/head.php';
                 echo StudentsCabin\Team\TeamDisplay::getTeamsCarouselDisplay();
             ?>
         </div>
+        <div class="row mt-3 text-center">
+            <div clas="col-md-6">
+                <a href="team" class="thm-btn">View All</a>
+            </div>
+        </div>
     </div>
 </section>
 <!--Team End-->

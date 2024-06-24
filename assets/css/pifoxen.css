@@ -6600,6 +6600,10 @@ ul {
   transition-duration: .7s;
   -webkit-transition-property: all;
   transition-property: all;
+  /* Sam */
+  height: 350px;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .volunteers-one__single:hover .volunteers-one__img img {
